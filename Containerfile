@@ -16,4 +16,4 @@ RUN akmods --force --kernels ${KERNEL_VERSION} --kmod nvidia
 
 FROM scratch
 ARG KERNEL_VERSION="${KERNEL_VERSION}"
-COPY --from=builder /var/cache/akmods/nvidia/kmod-nvidia-${KERNEL_VERSION}*.rpm /rpms
+COPY --from=builder /var/cache/akmods/nvidia/kmod-nvidia-${KERNEL_VERSION}*.rpm /rpms/
